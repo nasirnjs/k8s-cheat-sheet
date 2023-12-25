@@ -1,28 +1,4 @@
 
-## Working with Namespaces in Kubernetes
-
-How many Namespaces exist on the system?.\
-`kubectl get namespace --no-headers | wc -l`
-
-Create Name Space dev-ns.\
-`kubectl create ns dev-ns`
-
-How many pods exist in dev-ns?.\
-`kubectl get pods --namespace=dev-ns`
-
-How to switch namespace in kubernetes.\
-`kubectl config set-context --current --namespace=dev-ns`
-
-Create deployment with dev-ns Namespace.\
-`kubectl create deployment redis-deploy --image=redis --replicas=2 -n=dev-ns`
-
-List all pods in all namespaces, with more details.\
-`kubectl get pods -o wide -n dev-ns`
-
-List all pods in all namespaces, with more details.\
-`kubectl get pods -o wide --all-namespaces`
-
-
 ## Kubernetes simple Nginx Pod
 
 **Step 1: Create a YAML file named nginx-pod.yaml for for declarative way to create a pod**
