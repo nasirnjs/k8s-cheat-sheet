@@ -1,4 +1,4 @@
-# Namespaces
+# Namespaces, Kubectx and Kubens
 
 In Kubernetes, namespaces provides a mechanism for isolating groups of resources within a single cluster. Names of resources need to be unique within a namespace, but not across namespaces. Namespace-based scoping is applicable only for namespaced objects (e.g. Deployments, Services, etc) and not for cluster-wide objects (e.g. StorageClass, Nodes, PersistentVolumes, etc).
 
@@ -38,22 +38,21 @@ List all pods in all namespaces, with more details.\
 **Install** kubectx on Ubuntu 20.04 Lts or 22.04 Lts.\
 `snap install kubectx --classic`
 
-**Examples**
-switch to another cluster that's in kubeconfig,Switched to context "minikube".\
+**Examples**\
+Switch to another cluster that's in kubeconfig,Switched to context "minikube".\
 `kubectx minikube`
 
 Switch back to previous cluster, Switched to context `oregon`.\
 `kubectx -`
 
-Rename context "gke_ahmetb_europe-west1-b_dublin" renamed to "dublin".
+Rename context "gke_ahmetb_europe-west1-b_dublin" renamed to "dublin".\
 `kubectx dublin=gke_ahmetb_europe-west1-b_dublin`
-
 /
 /
-Change the active namespace on kubectl, Active namespace is `kube-system`.
+Change the active namespace on kubectl, Active namespace is `kube-system`.\
 `kubens kube-system`
 
-Go back to the previous namespace, Active namespace is `default`.
+Go back to the previous namespace, Active namespace is `default`.\
 `kubens -`
 
 **Conclusion:** Kubectx and Kubens are powerful tools that simplify the management of Kubernetes clusters and namespaces. These tools enhance productivity, collaboration, and troubleshooting capabilities by providing an intuitive way to navigate contexts, switch namespaces, and streamline operations. Whether you are a Kubernetes beginner or an experienced operator, integrating Kubectx and Kubens into your day-to-day operations will improve your workflow and make your life easier.
