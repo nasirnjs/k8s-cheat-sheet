@@ -1,4 +1,4 @@
-## How to merge Kubernetes kubectl config files into one for use MultiCluster or Switching contexts.
+## How to merge Kubernetes kubectl config files into one single file, for use MultiCluster or Switching contexts.
 When dealing with multiple Kubernetes clusters, merge their kubeconfig files into a single configuration file ($HOME/.kube/config). This facilitates context switching using kubectl config use-context <context-name>, streamlining the management of configurations for seamless multi-cluster operations.
 
 **Steps 1:**
