@@ -3,7 +3,7 @@ When dealing with multiple Kubernetes clusters, merge their kubeconfig files int
 
 **Steps 1:**
 The KUBECONFIG environment variable is a list of paths to configuration files.\
-`export KUBECONFIG=second-cluster-kubeconfig.yaml:config.back`
+`export KUBECONFIG=second-cluster-kubeconfig.yaml:first-cluster-kubeconfig.yaml`
 
 **Steps 2:**
 Merge all kubeconfig files into one.\
